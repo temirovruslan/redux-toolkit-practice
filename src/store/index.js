@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 // configureStore(): обертка для createStore(), упрощающая настройку хранилища с настройками по умолчанию. Позволяет автоматически комбинировать отдельные частичные редукторы (slice reducers), добавлять промежуточные слои или посредников (middlewares), по умолчанию включает redux-thunk (преобразователя), позволяет использовать расширение
 import todoReducer from "./todoSlice";
 //  todoReducer можно назвать как хочешь
@@ -8,5 +9,6 @@ export const store = configureStore({
 	// в шдавном редюсере могут быть много мелких редюсеров
 	reducer: {
 		todos: todoReducer,
+	
 	},
 });
