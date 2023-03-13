@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "name": "Сумия Темир",
+      "surname": "Ruslan",
+      "email": "ruslan.temirov1995@gmail.com",
+      "phone": "+3725530sasdsd",
+      "position": "Frontend Developerdsd",
+      "id": 1
+    },
+    {
+      "surname": "Smit",
+      "id": 2
+    },
+    {
+      "name": "Boby",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Alice",
+      "surname": "Lee",
+      "position": "Designer",
+      "email": "alice.lee@example.com",
+      "phone": "555-3456"
+    },
+    {
+      "id": 5,
+      "name": "David",
+      "surname": "Wong",
+      "position": "Engineer",
+      "email": "david.wong@example.com",
+      "phone": "555-7890"
+    },
+    {
+      "id": 6,
+      "name": "Emily",
+      "surname": "Chen",
+      "position": "Marketing",
+      "email": "emily.chen@example.com",
+      "phone": "555-2345"
+    },
+    {
+      "id": 7,
+      "name": "Frank",
+      "surname": "Davis",
+      "position": "Finance",
+      "email": "frank.davis@example.com",
+      "phone": "555-6789"
+    },
+    {
+      "id": 8,
+      "name": "Grace",
+      "surname": "Wilson",
+      "position": "HR",
+      "email": "grace.wilson@example.com",
+      "phone": "555-0123"
+    },
+    {
+      "id": 9,
+      "name": "Henry",
+      "surname": "Jones",
+      "position": "Support",
+      "email": "henry.jones@example.com",
+      "phone": "555-4567"
+    },
+    {
+      "id": 10,
+      "name": "Isabella",
+      "surname": "Garcia",
+      "position": "Operations",
+      "email": "isabella.garcia@example.com",
+      "phone": "555-8901"
+    }
+  ]
+}
