@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import toast, { Toaster } from "react-hot-toast";
+import Header from "../components/reusable/Header";
 
 const Users = () => {
 	const [users, setUsers] = useState({});
@@ -58,6 +59,7 @@ const Users = () => {
 	};
 	return (
 		<div className="bg-blue-100">
+			<Header/>
 			<div>
 				{users?.name && <p>{users.name}</p>}
 				{users?.surname && <p>{users.surname}</p>}

@@ -1,8 +1,8 @@
 {
   "users": [
     {
-      "name": "Сумия Темир",
-      "surname": "Ruslan",
+      "name": "Сумия Темирова",
+      "surname": "Ruslandds",
       "email": "ruslan.temirov1995@gmail.com",
       "phone": "+3725530sasdsd",
       "position": "Frontend Developerdsd",
@@ -71,6 +71,88 @@
       "position": "Operations",
       "email": "isabella.garcia@example.com",
       "phone": "555-8901"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project-01",
+      "created": "21.05.2019",
+      "teamSize": "50",
+      "id": 1,
+      "location": {
+        "city": "New York",
+        "country": "USA"
+      }
+    },
+    {
+      "name": "Project-02",
+      "created": "05.06.2019",
+      "teamSize": "30",
+      "id": 2,
+      "location": {
+        "city": "London",
+        "country": "UK"
+      }
+    },
+    {
+      "name": "Project-03",
+      "created": "12.08.2019",
+      "teamSize": "20",
+      "id": 3,
+      "location": {
+        "city": "Paris",
+        "country": "France"
+      }
+    },
+    {
+      "name": "Project-04",
+      "created": "04.10.2019",
+      "teamSize": "40",
+      "id": 4,
+      "location": {
+        "city": "Berlin",
+        "country": "Germany"
+      }
+    },
+    {
+      "name": "Project-05",
+      "created": "19.02.2020",
+      "teamSize": "60",
+      "id": 5,
+      "location": {
+        "city": "Tokyo",
+        "country": "Japan"
+      }
+    },
+    {
+      "name": "Project-06",
+      "created": "07.04.2020",
+      "teamSize": "25",
+      "id": 6,
+      "location": {
+        "city": "Sydney",
+        "country": "Australia"
+      }
+    },
+    {
+      "name": "Project-07",
+      "created": "26.07.2020",
+      "teamSize": "35",
+      "id": 7,
+      "location": {
+        "city": "Toronto",
+        "country": "Canada"
+      }
+    },
+    {
+      "name": "Project-08",
+      "created": "18.11.2020",
+      "teamSize": "15",
+      "id": 8,
+      "location": {
+        "city": "Barcelona",
+        "country": "Spain"
+      }
     }
   ]
 }

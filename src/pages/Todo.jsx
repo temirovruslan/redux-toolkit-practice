@@ -6,8 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchTodos, addNewTodo } from "../store/todoSlice";
 
 // components
-import TodoList from "../components/TodoList";
-import InputField from "../components/InputField";
+import TodoList from "../components/mainFiles/TodoList";
+import InputField from "../components/mainFiles/InputField";
+import Header from "../components/reusable/Header";
 
 function Todo() {
 	const [text, setText] = useState("");
@@ -27,6 +28,7 @@ function Todo() {
 
 	return (
 		<div className="App flex">
+			<Header/>
 			<div className="flex flex-col  w-64 bg-zinc-300">
 				<h2 className="text-2xl">Add, delete, change text</h2>
 				<InputField

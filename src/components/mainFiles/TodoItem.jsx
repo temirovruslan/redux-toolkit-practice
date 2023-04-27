@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { deleteTodo, toggleStatus } from "../store/todoSlice";
+import { deleteTodo, toggleStatus } from "../../store/todoSlice";
 // import deleteTodo from '../store/todoSlice'
 
 const TodoItem = ({ id, title, completed }) => {
