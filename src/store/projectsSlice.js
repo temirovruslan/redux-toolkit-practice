@@ -14,6 +14,7 @@ export const fetchProjects = createAsyncThunk(
 	}
 );
 
+// setSelectedProject is action which updates selectedProject
 export const setSelectedProject = createAction("projects/setSelectedProject");
 
 const projectsSlice = createSlice({
@@ -25,12 +26,19 @@ const projectsSlice = createSlice({
 	reducers: {},
 	extraReducers: {
 		[fetchProjects.fulfilled](state, action) {
+			// if fulfilled is true getItem  from localStorage
+			const projectFromLocalStorage = JSON.parse(
+				localStorage.getItem("selectedProject")
+			);
 			state.projects = action.payload;
-			state.selectProject = action.payload[7];
+			// if projectFromLocalStorage is true put it if not put action.payload[7]
+			state.selectProject = projectFromLocalStorage ?? action.payload[7];
 			state.loading = false;
 		},
+		// setSelectedProject is action which updates selectedProject
 		[setSelectedProject](state, action) {
 			state.selectProject = action.payload;
+
 			localStorage.setItem(
 				"selectedProject",
 				JSON.stringify(action.payload)
