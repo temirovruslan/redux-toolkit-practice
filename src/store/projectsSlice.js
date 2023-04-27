@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchProjects = createAsyncThunk(
@@ -14,49 +14,29 @@ export const fetchProjects = createAsyncThunk(
 	}
 );
 
+export const setSelectedProject = createAction("projects/setSelectedProject");
+
 const projectsSlice = createSlice({
 	name: "projectsSlice",
 	initialState: {
 		projects: [],
-		error: null,
-		loading: null,
-		// selectedProject: null,
+		selectProject: null,
 	},
-	reducers: {
-		// selectedProjectNow(state, action) {
-		// 	// update the selectedProject when a new project is chosen
-		// 	const selectedProj = state.projects.find(
-		// 		(proj) => proj.id === action.payload.id
-		// 	);
-		// 	state.selectedProject = selectedProj;
-		// 	localStorage.setItem(
-		// 		"selectedProject",
-		// 		JSON.stringify(selectedProj)
-		// 	);
-		// },
-	},
+	reducers: {},
 	extraReducers: {
-		[fetchProjects.pending](state, action) {
-			state.loading = true;
-			state.error = null;
-		},
 		[fetchProjects.fulfilled](state, action) {
 			state.projects = action.payload;
-			// state.selectedProjectNow = action.payload[0];
-		
-			// localStorage.setItem(
-			// 	"selectedProject",
-			// 	JSON.stringify(action.payload[0])
-			// );
+			state.selectProject = action.payload[7];
 			state.loading = false;
 		},
-		[fetchProjects.rejected](state, action) {
-			state.error = action.payload;
-			state.loading = false;
+		[setSelectedProject](state, action) {
+			state.selectProject = action.payload;
+			localStorage.setItem(
+				"selectedProject",
+				JSON.stringify(action.payload)
+			);
 		},
 	},
 });
-
-export const { selectedProjectNow } = projectsSlice.actions;
 
 export default projectsSlice.reducer;

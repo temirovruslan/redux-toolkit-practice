@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/reusable/Header";
-import { fetchProjects, selectedProjectNow } from "../../store/projectsSlice";
+import { fetchProjects, setSelectedProject } from "../../store/projectsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ListOfProjects from "./ListOfProjects";
+import GetDataFromSelectedProject from "./GetDataFromSelectedProject";
 
 const PracticeToFetchAndAddTodos = () => {
 	const projects = useSelector((state) => state.projects.projects);
 	const projectsData = useSelector((state) => state.projects);
-	console.log(
-		"PracticeToFetchAndAddTodos ~ projectsData >",
-		projectsData.selectedProjectNow
-	);
 
 	const [pickProject, setpickProject] = useState();
 
@@ -29,7 +26,7 @@ const PracticeToFetchAndAddTodos = () => {
 			if (selectedProject) {
 				setpickProject(selectedProject);
 			} else {
-				setpickProject(projects[0]);
+				setpickProject(projectsData.selectProject);
 			}
 		}
 	}, [projects]);
@@ -39,8 +36,7 @@ const PracticeToFetchAndAddTodos = () => {
 			return project.id == id;
 		});
 		setpickProject(choosenProject[0]);
-		// dispatch(selectedProjectNow(id));
-		// Save the selected project to localStorage
+		dispatch(setSelectedProject(choosenProject[0]));
 		localStorage.setItem(
 			"selectedProject",
 			JSON.stringify(choosenProject[0])
@@ -59,6 +55,7 @@ const PracticeToFetchAndAddTodos = () => {
 			)}
 			<ListOfProjects projects={projects} chooseProject={chooseProject} />
 			<Header />
+			<GetDataFromSelectedProject />
 		</div>
 	);
 };
